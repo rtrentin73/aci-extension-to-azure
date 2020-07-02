@@ -1,0 +1,12 @@
+--- 
+- hosts: all 
+  connection: local
+  tasks: 
+
+    - name: Create tenant 
+      aci_tenant: name: '{{ tenant_name }}’ 
+      descr: 'tenant by Ansible’ 
+      host: '{{ inventory_hostname }}’ 
+      username: '{{ lookup("env", "ANSIBLE_NET_USERNAME") }}’ 
+      password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD") }}’ 
+      validate_certs: no
