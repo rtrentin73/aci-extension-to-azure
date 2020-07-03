@@ -3,16 +3,39 @@
   connection: local
   tasks: 
 
-    - name: Create a tenant
+    - name: Create a filter to an existing contract
       aci_rest:
         host: '{{ inventory_hostname }}'
         username: '{{ lookup("env", "ANSIBLE_NET_USERNAME")}}'
         password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD")}}'
-        path: /api/mo/uni.json
+        path: /api/node/mo/uni/tn-{{TENANT}}/flt-{{FILTER}}.json
         method: post
         content:
           {
-         
+         {
+   "vzFilter":{
+      "attributes":{
+         "name":"{{FILTER}}"
+      },
+      "children":[
+         {
+            "vzEntry":{
+               "attributes":{
+                  "name":"f-{{PORT}}",
+                  "etherT":"ip",
+                  "prot":"{{PROTOCOL}}",
+                  "dFromPort":"{{PORT}}",
+                  "dToPort":"{{PORT}}",
+                  "status":"created"
+               },
+               "children":[
+
+               ]
+            }
+         }
+      ]
+   }
+}
           }
         validate_certs: no
       delegate_to: localhost
