@@ -14,7 +14,7 @@
       {
       "fvTenant":{
         "attributes":{
-           "name":"{{TENANT}}"",
+           "name":"{{TENANT}}",
            "status":"created"
         },
         "children":[
