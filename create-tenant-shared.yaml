@@ -15,6 +15,7 @@
             "fvTenant":{
         "attributes":{
            "name":"{{TENANT}}",
+           "descr":"created from awx",
            "status":"created"
         },
         "children":[
