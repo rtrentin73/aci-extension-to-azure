@@ -8,22 +8,22 @@
         host: '{{ inventory_hostname }}'
         username: '{{ lookup("env", "ANSIBLE_NET_USERNAME")}}'
         password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD")}}'
-        path: /api/node/mo/uni/tn-{{TENANT}}/flt-{{FILTER}}.json
+        path: /api/node/mo/uni/tn-{{TENANT}}/flt-f-{{PORT}}.json
         method: post
         content:
           {
            "vzFilter":{
       "attributes":{
-         "name":"{{FILTER}}",
+         "name":"f-{{PORT}}",
          "status":"created"
       },
       "children":[
          {
             "vzEntry":{
                "attributes":{
-                  "name":"{{FILTERENTRY}}",
+                  "name":"{{PORT}}",
                   "etherT":"ip",
-                  "prot":"tcp",
+                  "prot":"PROTOCOL",
                   "dFromPort":"{{PORT}}",
                   "dToPort":"unspecified",
                   "status":"created"
