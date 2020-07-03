@@ -22,15 +22,15 @@
             "cloudCidr":{
                "attributes":{
                   "primary":"yes",
-                  "addr":"{{CIDR}}/16",
+                  "addr":"{{CIDR}}/{{CIDRMASK}}",
                   "status":"created"
                },
                "children":[
                   {
                      "cloudSubnet":{
                         "attributes":{
-                           "name":"subnet-{{CIDRSUBNET2}}_24",
-                           "ip":"{{CIDRSUBNET2}}/24",
+                           "name":"subnet-{{SUBNET2}}_24",
+                           "ip":"{{SUBNET2}}/{{SUBNET2MASK}}",
                            "status":"created"
                         },
                         "children":[
@@ -50,8 +50,8 @@
                   {
                      "cloudSubnet":{
                         "attributes":{
-                           "name":"subnet-{{CIDRSUBNET1}}_24",
-                           "ip":"{{CIDRSUBNET1}}/24",
+                           "name":"subnet-{{SUBNET1}}_24",
+                           "ip":"{{SUBNET1}}/{{SUBNET1MASK}}",
                            "status":"created"
                         },
                         "children":[
