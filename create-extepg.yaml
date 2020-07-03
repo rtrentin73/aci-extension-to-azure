@@ -3,7 +3,7 @@
   connection: local
   tasks: 
 
-    - name: Create a tenant
+    - name: Create an External EPG
       aci_rest:
         host: '{{ inventory_hostname }}'
         username: '{{ lookup("env", "ANSIBLE_NET_USERNAME")}}'
