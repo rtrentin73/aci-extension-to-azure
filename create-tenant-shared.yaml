@@ -30,5 +30,5 @@
         ]
        }
           }
-      validate_certs: no
-      delegate_to: localhost
+        validate_certs: no
+        delegate_to: localhost
