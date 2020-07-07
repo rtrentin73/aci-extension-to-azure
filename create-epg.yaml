@@ -22,7 +22,7 @@
                 "cloudEPSelector":{
                 "attributes":{
                       "name":"{{EPG}}-epsel",
-                    "matchExpression":"IP=='{{SUBNET}}/{{SUBNETMASK}'",
+                    "matchExpression":"IP=='{{SUBNET}}/{{SUBNETMASK}}'",
                     "status":"created"
                 },
                 "children":[
