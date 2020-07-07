@@ -23,7 +23,7 @@
                "attributes":{
                   "name":"{{PORT}}",
                   "etherT":"ip",
-                  "prot":"PROTOCOL",
+                  "prot":"{{PROTOCOL}}",
                   "dFromPort":"{{PORT}}",
                   "dToPort":"unspecified",
                   "status":"created"
