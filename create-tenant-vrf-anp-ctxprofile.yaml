@@ -11,8 +11,8 @@
         path: /api/mo/uni.json
         method: post
         content:
-{
-  "polUni": {
+          {
+            "polUni": {
     "attributes": {
       "annotation": "", 
       "dn": "uni", 
@@ -195,7 +195,7 @@
                 "attributes": {
                   "annotation": "", 
                   "dn": "", 
-                  "tDn": "uni/tn-infra/act-[{{SUBCSCRIPTION}}]-vendor-azure", 
+                  "tDn": "uni/tn-infra/act-[{{SUBSCRIPTION}}]-vendor-azure", 
                   "userdom": ":all:"
                 }
               }
@@ -541,6 +541,6 @@
       }
     ]
   }
-}
+        }
         validate_certs: no
       delegate_to: localhost
