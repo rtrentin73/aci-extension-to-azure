@@ -219,8 +219,8 @@
               "cloudCtxProfile": {
                 "attributes": {
                   "annotation": "", 
-                  "azResourceGroup": "", 
-                  "azVirtualNetwork": "", 
+                  "azResourceGroup": "{{RG}}", 
+                  "azVirtualNetwork": "{{VNET}}", 
                   "descr": "", 
                   "dn": "", 
                   "name": "{{TENANT}}ctxprof", 
