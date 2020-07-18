@@ -23,7 +23,7 @@
          {
             "cloudRsLDevToCloudSubnet":{
                "attributes":{
-                  "tDn":"uni/tn-{{TENANT}}/ctxprofile-{{CTXPROFILE}}/cidr-[{{CIDR}}]/subnet-[{{NLBSUBNET}}]"
+                  "tDn":"uni/tn-{{TENANT}}/ctxprofile-{{CTXPROFILE}}/cidr-[{{CIDR}}/16]-[{{NLBSUBNET/24}}]"
                },
                "children":[
 
